@@ -3,40 +3,52 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Bell MT', sans-serif;
    }
-    header {
-    background-color: #fbd0c3;
-    color:white;
-    padding: 50px;
-    text-align: center;
-    border:none;
-    top:0;
-    margin: 0px;
-    
-    
-    }
-
+   header {
+    background-color: #ffd1c4;  
+    color: white; 
+    padding: 50px;  
+    text-align: center;  
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;  
+    padding: 0;
+    margin: 0;
+    display: flex;  
+    justify-content: center;
+      
+  }
+  
+  nav ul li {
+    margin: 0 15px;  
+  }
+  
+  nav ul li a {
+    text-decoration: none;  
+    color: white; 
+    font-size: 1.6rem;  
+    font-weight: bold;  
+    text-transform: uppercase; 
+    transition: color 0.3s ease, transform 0.3s ease;  
+  }
+  
+  nav ul li a:hover {
+    color: #ff6666;  
+    transform: scale(1.1);  
+  }
+  
+  @media (max-width: 768px) {
     nav ul {
-    list-style:none;
-    padding:0;
+        flex-direction: column; 
     }
-
-    nav ul {
-    list-style:none;
-    padding:0;
-    }
-
+    
     nav ul li {
-    display: inline;
-    margin: 10px;
+        margin: 10px 0;  
     }
-
-    nav ul li a {
-    color: white;
-    text-decoration: none;
-    }
-
+  }
     body{
         background-color: #89898b ;
        position: cover;
@@ -81,33 +93,61 @@
             padding: 0;
             transform: translate(-1%,2%);
         }
-    #dark{
-        transform: translate(2450%, -28900%);
-        background-color: #1a1a1a;
-        cursor: pointer;
-    }
-    #dark:hover{
-      background-color: #333;
-    }
-    #Eventos {
-        background-color: #fbd0c3;
+        #dark {
+          background-color: #ff66b2; 
+          color: #fff; 
+          font-size: 20px;
+          padding: 12px; 
+          border-radius: 50%; 
+          border: none;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+          cursor: pointer;
+          transition: all 0.3s ease-in-out; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px; 
+          width: 50px; 
+          position: fixed; 
+          top: 20px; 
+          left: 20px; 
+          z-index: 1000; 
+      }
+
+      #dark:hover {
+          background-color: #ff3399; 
+          box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.6);
+          border-radius: 50%; 
+        }
+
+     
+      #dark:active {
+          transform: scale(0.95); 
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
+      }
+      
+      #Eventos {
+        background: linear-gradient(135deg, #1c1c1c, #4a90e2); /* Degradê de preto para azul */
         border: none;
         padding: 50px;
         width: 30%;
         border-radius: 100px;
-        transform: translate(42%, 3900%);
+        transform: translate(42%, 3900%); /* Mantém a posição do botão */
         position: absolute;
         top: 30%;
         left: 50%;
-        color: #fbd0c3;
-        font-size: 10px;
+        color: white; /* Texto branco para contrastar com o fundo */
+        font-size: 16px; /* Aumentei o tamanho da fonte para ser mais legível */
         cursor: pointer;
-       }
-
-       #Eventos:hover{
-        background-color: #ff9393;
-       }
-
+        transition: background 0.3s ease; /* Transição suave para o fundo */
+    }
+    
+    #Eventos:hover {
+        background: linear-gradient(135deg, #4a90e2, #1c1c1c); /* Inverte o degradê no hover */
+    }
+    
+    
+    
     footer {
       padding: 2rem 1rem;
       border-top: 1px solid ;
